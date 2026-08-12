@@ -65,12 +65,6 @@ export const handleRedirectOriginalURL = async (req, res) => {
     // Redirecting to the Original URl
     res.redirect(entry.redirectURL);
 
-    // Sending Success Message
-    res.status(201).json({
-      success: true,
-      message: 'Redirecting to the original URL...',
-    });
-
     // Error Hangelling
   } catch (error) {
     res.status(400).json({
