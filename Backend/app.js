@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 // Define URL-API Routes
-app.use('/api/url', URLRouter);
+app.use('/', URLRouter);
 
 // Exporrting Functions
 export default app;

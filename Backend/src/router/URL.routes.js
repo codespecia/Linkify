@@ -11,7 +11,7 @@ import {
 const URLRouter = express.Router();
 
 // Creating CreateURL Route
-URLRouter.post('/createshortid', handleCreateShortID);
+URLRouter.post('/api/url/createshortid', handleCreateShortID);
 
 // Creating RedirectURL Route
 URLRouter.get('/:shortId', handleRedirectOriginalURL);
