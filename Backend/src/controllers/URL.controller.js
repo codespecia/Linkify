@@ -1,8 +1,12 @@
 // Importing External Modules
+import 'dotenv/config';
 import { nanoid } from 'nanoid';
 
 // Importing Internal Function
 import URLModel from '../models/URL.model.js';
+
+// Defining Variables
+const BASE_URI = process.env.BASE_URI;
 
 // Create and Export handleCreateShortID
 export const handleCreateShortID = async (req, res) => {
@@ -34,8 +38,8 @@ export const handleCreateShortID = async (req, res) => {
     // Sending Success Message
     res.status(201).json({
       success: true,
-      message: 'shortID created successfully',
-      shortID: shortID,
+      message: 'ShortID created successfully',
+      shortID: `${BASE_URI}/${shortID}`,
     });
 
     // Error Hangelling
